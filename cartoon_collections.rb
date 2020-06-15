@@ -19,8 +19,11 @@ def long_planeteer_calls(planeteer_calls)
   planeteer_calls.any? { |planeteer_calls| planeteer_calls.length > 4 }
 end
 
+
 def find_valid_calls(planeteer_calls)
   valid_calls = ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
-  planeteer_calls.detect {  |valid_calls, planeteer_calls|
-    valid_calls == planeteer_calls}
+  
+  planeteer_calls.detect do  |planeteer_calls|
+    valid_calls == planeteer_calls
+  end
 end
